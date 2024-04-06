@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/ros/ros_ws/follow_ball_project/devel/setup.sh
