@@ -1,2 +1,2 @@
-my_robot
+ball_chaser:my_robot
 -DCATKIN_DEVEL_PREFIX=/home/ros/ros_ws/follow_ball_project/devel -DCMAKE_INSTALL_PREFIX=/home/ros/ros_ws/follow_ball_project/install -G Unix Makefiles
