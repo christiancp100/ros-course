@@ -9,7 +9,7 @@
     <arg name="debug" value="false"/>
     <arg name="gui" value="true" />
     <arg name="world_name" value="$(arg world_file)"/>
-  </include>f
+  </include>
 
   <!-- Robot pose -->
   <arg name="x" default="0"/>
@@ -32,5 +32,8 @@
 
   <!-- Launch RViz -->
   <node name="rviz" pkg="rviz" type="rviz" respawn="false"/>
+
+  <!-- Drive Bot Node -->
+    <node name="drive_bot" type="drive_bot" pkg="ball_chaser" output="screen"></node>
 
 </launch>

@@ -350,6 +350,19 @@ std_msgs_generate_messages_cpp/fast:
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+
+# Build rule for target.
+rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_nodejs
 
 # Build rule for target.
@@ -649,17 +662,17 @@ drive_bot/fast:
 .PHONY : drive_bot/fast
 
 #=============================================================================
-# Target rules for targets named rosgraph_msgs_generate_messages_cpp
+# Target rules for targets named process_image
 
 # Build rule for target.
-rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rosgraph_msgs_generate_messages_cpp
-.PHONY : rosgraph_msgs_generate_messages_cpp
+process_image: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 process_image
+.PHONY : process_image
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+process_image/fast:
+	$(MAKE) -f ball_chaser/CMakeFiles/process_image.dir/build.make ball_chaser/CMakeFiles/process_image.dir/build
+.PHONY : process_image/fast
 
 # Help Target
 help:
@@ -688,6 +701,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... ball_chaser_generate_messages_eus"
 	@echo "... ball_chaser_generate_messages_nodejs"
@@ -711,7 +725,7 @@ help:
 	@echo "... ball_chaser_gennodejs"
 	@echo "... ball_chaser_genlisp"
 	@echo "... drive_bot"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... process_image"
 .PHONY : help
 
 

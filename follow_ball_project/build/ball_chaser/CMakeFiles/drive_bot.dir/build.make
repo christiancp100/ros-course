@@ -80,22 +80,22 @@ drive_bot_EXTERNAL_OBJECTS =
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: ball_chaser/CMakeFiles/drive_bot.dir/src/drive_bot.cpp.o
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: ball_chaser/CMakeFiles/drive_bot.dir/build.make
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /opt/ros/noetic/lib/libroscpp.so
-/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/aarch64-linux-gnu/libpthread.so
-/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0
-/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /opt/ros/noetic/lib/librosconsole.so
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /opt/ros/noetic/lib/librosconsole_log4cxx.so
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
-/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0
+/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /opt/ros/noetic/lib/libxmlrpcpp.so
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /opt/ros/noetic/lib/libroscpp_serialization.so
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /opt/ros/noetic/lib/librostime.so
-/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0
+/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /opt/ros/noetic/lib/libcpp_common.so
-/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
-/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
-/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
+/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+/home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot: ball_chaser/CMakeFiles/drive_bot.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ros/ros_ws/follow_ball_project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ros/ros_ws/follow_ball_project/devel/lib/ball_chaser/drive_bot"
 	cd /home/ros/ros_ws/follow_ball_project/build/ball_chaser && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/drive_bot.dir/link.txt --verbose=$(VERBOSE)

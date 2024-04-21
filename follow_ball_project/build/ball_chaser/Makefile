@@ -101,6 +101,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +134,6 @@ install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -226,6 +226,21 @@ std_msgs_generate_messages_cpp: ball_chaser/CMakeFiles/std_msgs_generate_message
 std_msgs_generate_messages_cpp/fast:
 	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f ball_chaser/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make ball_chaser/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f CMakeFiles/Makefile2 ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ball_chaser/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
@@ -573,19 +588,19 @@ drive_bot/fast:
 .PHONY : drive_bot/fast
 
 # Convenience name for target.
-ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f CMakeFiles/Makefile2 ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+ball_chaser/CMakeFiles/process_image.dir/rule:
+	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f CMakeFiles/Makefile2 ball_chaser/CMakeFiles/process_image.dir/rule
+.PHONY : ball_chaser/CMakeFiles/process_image.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+process_image: ball_chaser/CMakeFiles/process_image.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+.PHONY : process_image
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ball_chaser/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+process_image/fast:
+	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f ball_chaser/CMakeFiles/process_image.dir/build.make ball_chaser/CMakeFiles/process_image.dir/build
+.PHONY : process_image/fast
 
 src/drive_bot.o: src/drive_bot.cpp.o
 
@@ -614,6 +629,33 @@ src/drive_bot.cpp.s:
 	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f ball_chaser/CMakeFiles/drive_bot.dir/build.make ball_chaser/CMakeFiles/drive_bot.dir/src/drive_bot.cpp.s
 .PHONY : src/drive_bot.cpp.s
 
+src/process_image.o: src/process_image.cpp.o
+
+.PHONY : src/process_image.o
+
+# target to build an object file
+src/process_image.cpp.o:
+	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f ball_chaser/CMakeFiles/process_image.dir/build.make ball_chaser/CMakeFiles/process_image.dir/src/process_image.cpp.o
+.PHONY : src/process_image.cpp.o
+
+src/process_image.i: src/process_image.cpp.i
+
+.PHONY : src/process_image.i
+
+# target to preprocess a source file
+src/process_image.cpp.i:
+	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f ball_chaser/CMakeFiles/process_image.dir/build.make ball_chaser/CMakeFiles/process_image.dir/src/process_image.cpp.i
+.PHONY : src/process_image.cpp.i
+
+src/process_image.s: src/process_image.cpp.s
+
+.PHONY : src/process_image.s
+
+# target to generate assembly for a file
+src/process_image.cpp.s:
+	cd /home/ros/ros_ws/follow_ball_project/build && $(MAKE) -f ball_chaser/CMakeFiles/process_image.dir/build.make ball_chaser/CMakeFiles/process_image.dir/src/process_image.cpp.s
+.PHONY : src/process_image.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -628,6 +670,8 @@ help:
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... test"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... ball_chaser_generate_messages_eus"
 	@echo "... ball_chaser_generate_messages_nodejs"
@@ -653,11 +697,13 @@ help:
 	@echo "... ball_chaser_genlisp"
 	@echo "... install/strip"
 	@echo "... drive_bot"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... test"
+	@echo "... process_image"
 	@echo "... src/drive_bot.o"
 	@echo "... src/drive_bot.i"
 	@echo "... src/drive_bot.s"
+	@echo "... src/process_image.o"
+	@echo "... src/process_image.i"
+	@echo "... src/process_image.s"
 .PHONY : help
 
 
